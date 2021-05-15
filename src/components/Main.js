@@ -39,7 +39,11 @@ class Main extends Component {
         <Header />
         <Switch>
           <Route path="/home" component={HomePage} />
-          <Route exact path="/shop" render={() => <Shop />} />
+          <Route
+            exact
+            path="/shop"
+            render={() => <Shop items={this.props.items} />}
+          />
           <Redirect to="/home" />
         </Switch>
         <Footer />

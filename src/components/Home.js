@@ -37,7 +37,7 @@ function Home(props) {
               <FadeTransform in>
                 <img
                   className="d-flex img-thumbnail ml-3 ml-lg-5 border-0"
-                  src="/assets/ReactiveWare.png"
+                  src="/assets/images/ReactiveWare.png"
                   width="300"
                   alt="About Us"
                 />
@@ -62,15 +62,20 @@ function Home(props) {
             >
               <h2>Where it all comes from</h2>
               <p>
-                We believe in transparency, click the button below to find out
-                how we make our clothes from start to finish.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
               <Button
                 color="dark"
                 className="btn btn-lg float-md-right mr-5 d-none d-sm-inline"
-                href="/menu"
+                href="/info"
               >
-                Menu
+                Info
               </Button>
             </FadeTransform>
           </div>
@@ -78,8 +83,8 @@ function Home(props) {
             <div className="media">
               <FadeTransform in>
                 <img
-                  class="d-flex mr-3 img-thumbnail border-0"
-                  src="/assets/images/breadPatrickOne.jpg"
+                  class="d-flex mr-3 img-thumbnail"
+                  src="/assets/images/clothing-dark.jpg"
                   width="400"
                   alt="Where it comes from"
                 />
@@ -88,9 +93,9 @@ function Home(props) {
             <Button
               color="dark"
               className="btn btn-lg float-md-right d-sm-none mt-3"
-              href="menu.html"
+              href="info.html"
             >
-              Menu
+              Info
             </Button>
           </div>
         </div>

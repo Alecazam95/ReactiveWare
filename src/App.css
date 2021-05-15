@@ -1,7 +1,6 @@
 .navbar {
   background-color: white;
-  margin-bottom: 0px;
-  margin-top: 0px;
+  padding-bottom: 0px;
 }
 
 .row-content {
@@ -12,8 +11,8 @@
 }
 
 .site-footer {
-  background-color: white;
-  padding: 20px 0;
+  background-color: black;
+  padding-top: 5px;
 }
 
 html {
@@ -23,10 +22,15 @@ html {
 p,
 h1,
 h2,
-h3 {
+h3,
+h5 {
   color: white;
 }
 
 .page-wrap {
   background: black;
+}
+
+.img {
+  border: 0;
 }

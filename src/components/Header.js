@@ -33,7 +33,7 @@ class Header extends Component {
           <div className="container">
             <NavbarBrand className="mr-4" href="/">
               <img
-                src="/assets/ReactiveWare-logos_black.png"
+                src="/assets/images/ReactiveWare-logos_black.png"
                 height="50"
                 width="50"
                 alt="ReactiveWare Logo"

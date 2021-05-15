@@ -1,6 +1,13 @@
 import React from "react";
 import { Loading } from "./Loading";
-import { Card, CardImg, CardTitle, CardImgOverlay } from "reactstrap";
+import {
+  Card,
+  CardImg,
+  CardTitle,
+  CardImgOverlay,
+  Breadcrumb,
+  BreadcrumbItem,
+} from "reactstrap";
 import { Link } from "react-router-dom";
 import { baseUrl } from "../shared/baseUrl";
 
@@ -36,7 +43,19 @@ function Shop(props) {
   }
 
   return (
-    <div className="container">
+    <div className="container mt-5">
+      <div className="row">
+        <div className="col">
+          <Breadcrumb>
+            <BreadcrumbItem>
+              <Link to="/home">Home</Link>
+            </BreadcrumbItem>
+            <BreadcrumbItem active>Shop</BreadcrumbItem>
+          </Breadcrumb>
+          <h2>Shop</h2>
+          <hr />
+        </div>
+      </div>
       <div className="row">{shop}</div>
     </div>
   );

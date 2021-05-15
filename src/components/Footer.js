@@ -17,7 +17,7 @@ function Footer(props) {
               <h5>Links</h5>
               <ul className="list-unstyled">
                 <li>
-                  <Link to="/aboutus" style={{ color: "#556b2f" }}>
+                  <Link to="/aboutus" style={{ color: "#FFF" }}>
                     About Us
                   </Link>
                 </li>
@@ -50,7 +50,7 @@ function Footer(props) {
                 role="button"
                 className="btn btn-link"
                 href="tel:+12065551234"
-                style={{ color: "#556b2f" }}
+                style={{ color: "#FFF" }}
               >
                 <i className="fa fa-phone" /> 1-800-555-5555
               </Link>
@@ -59,7 +59,7 @@ function Footer(props) {
                 role="button"
                 className="btn btn-link"
                 href="mailto:Bread@G&G.com"
-                style={{ color: "#556b2f" }}
+                style={{ color: "#FFF" }}
               >
                 <i className="fa fa-envelope-o" /> support@ReactiveWare.com
               </Link>

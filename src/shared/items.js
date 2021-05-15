@@ -5,7 +5,7 @@ export const ITEMS = [
     name: "classic-T",
     price: 14,
     description: "A classic T",
-    image: "assets/testImage.png",
+    image: "assets/images/ReactiveWare.png",
   },
   {
     id: 1,
@@ -13,7 +13,7 @@ export const ITEMS = [
     name: "Long Sleve Shirt",
     price: 18,
     description: "A long sleeve shirt",
-    image: "assets/testImage.png",
+    image: "assets/images/ReactiveWare.png",
   },
   {
     id: 2,
@@ -21,6 +21,6 @@ export const ITEMS = [
     name: "Shorts",
     price: 25,
     decription: "Short shorts",
-    image: "assets/testImage.png",
+    image: "assets/images/ReactiveWare.png",
   },
 ];
