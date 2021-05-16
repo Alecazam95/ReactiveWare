@@ -15,6 +15,7 @@ import { connect } from "react-redux";
 // Import redux Action Creators
 import { fetchItems } from "../redux/ActionCreators";
 
+// Map state to props
 const mapStateToProps = (state) => {
   return {
     items: state.items,
