@@ -6,6 +6,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Home from "./Home";
 import Shop from "./Shop";
+import About from "./About";
 
 // Import router and redux functionality
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
@@ -44,6 +45,7 @@ class Main extends Component {
             path="/shop"
             render={() => <Shop items={this.props.items} />}
           />
+          <Route exact path="/aboutus" render={() => <About />} />
           <Redirect to="/home" />
         </Switch>
         <Footer />

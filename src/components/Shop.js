@@ -45,7 +45,7 @@ function Shop(props) {
   return (
     <div className="container mt-5">
       <div className="row">
-        <div className="col">
+        <div className="col mt-5">
           <Breadcrumb>
             <BreadcrumbItem>
               <Link to="/home">Home</Link>
