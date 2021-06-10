@@ -52,6 +52,11 @@ class Header extends Component {
                     <g>Shop</g>
                   </NavLink>
                 </NavItem>
+                <NavItem>
+                  <NavLink className="nav-link" to="/howitsmade">
+                    <g>How It's Made</g>
+                  </NavLink>
+                </NavItem>
               </Nav>
             </Collapse>
           </div>

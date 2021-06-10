@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import Home from "./Home";
 import Shop from "./Shop";
 import About from "./About";
+import HowMade from "./HowMade";
 
 // Import router and redux functionality
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
@@ -32,21 +33,18 @@ class Main extends Component {
   }
 
   render() {
-    const HomePage = () => {
-      return <Home />;
-    };
-
     return (
       <div className="page-wrap">
         <Header />
         <Switch>
-          <Route path="/home" component={HomePage} />
+          <Route exact path="/home" render={() => <Home />} />
           <Route
             exact
             path="/shop"
             render={() => <Shop items={this.props.items} />}
           />
           <Route exact path="/aboutus" render={() => <About />} />
+          <Route exact path="/howitsmade" render={() => <HowMade />} />
           <Redirect to="/home" />
         </Switch>
         <Footer />

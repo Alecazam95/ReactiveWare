@@ -11,10 +11,10 @@ function Home(props) {
             <FadeTransform
               in
               transformProps={{
-                exitTransform: "translateX(-100%)",
+                exitTransform: "translateX(-25%)",
               }}
             >
-              <h2>About us</h2>
+              <h1>About us</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -57,10 +57,10 @@ function Home(props) {
             <FadeTransform
               in
               transformProps={{
-                exitTransform: "translateX(200%)",
+                exitTransform: "translateX(25%)",
               }}
             >
-              <h2>Where it all comes from</h2>
+              <h1>Where it all comes from</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
