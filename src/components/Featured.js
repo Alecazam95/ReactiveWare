@@ -11,14 +11,16 @@ import {
 import { Link } from "react-router-dom";
 import { baseUrl } from "../shared/baseUrl";
 
-function Shop(props) {
-  const shop = props.items.items.map((item) => {
-    return (
-      <div key={item.id} className="col-md-5 m-4">
-        <RenderShopItem item={item} />
-      </div>
-    );
-  });
+function Featured(props) {
+  const featuredItems = props.items.items
+    .filter((items) => items.featured === true)
+    .map((item) => {
+      return (
+        <div className="col-md-4 m-1">
+          <FeaturedItem item={item} />
+        </div>
+      );
+    });
 
   if (props.items.isLoading) {
     return (
@@ -52,18 +54,18 @@ function Shop(props) {
             <BreadcrumbItem>
               <Link to="/home">Home</Link>
             </BreadcrumbItem>
-            <BreadcrumbItem active>Shop</BreadcrumbItem>
+            <BreadcrumbItem active>Featured</BreadcrumbItem>
           </Breadcrumb>
-          <h2>Shop</h2>
+          <h2>Featured</h2>
           <hr />
         </div>
       </div>
-      <div className="row flex justify-content-center">{shop}</div>
+      <div className="row">{featuredItems}</div>
     </div>
   );
 }
 
-function RenderShopItem({ item }) {
+function FeaturedItem({ item }) {
   return (
     <Card>
       <Link to={`/shop/${item.id}`}>
@@ -76,4 +78,4 @@ function RenderShopItem({ item }) {
   );
 }
 
-export default Shop;
+export default Featured;

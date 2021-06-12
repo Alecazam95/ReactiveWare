@@ -8,6 +8,7 @@ import Home from "./Home";
 import Shop from "./Shop";
 import About from "./About";
 import HowMade from "./HowMade";
+import Featured from "./Featured";
 
 // Import router and redux functionality
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
@@ -37,7 +38,10 @@ class Main extends Component {
       <div className="page-wrap">
         <Header />
         <Switch>
-          <Route exact path="/home" render={() => <Home />} />
+          <Route
+            path="/home"
+            render={() => <Home items={this.props.items} />}
+          />
           <Route
             exact
             path="/shop"
@@ -45,6 +49,11 @@ class Main extends Component {
           />
           <Route exact path="/aboutus" render={() => <About />} />
           <Route exact path="/howitsmade" render={() => <HowMade />} />
+          <Route
+            exact
+            path="/featured"
+            render={() => <Featured items={this.props.items} />}
+          />
           <Redirect to="/home" />
         </Switch>
         <Footer />

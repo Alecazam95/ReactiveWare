@@ -1,21 +1,102 @@
 import React from "react";
-import { Button } from "reactstrap";
+import { Button, Card, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
+import { Loading } from "./Loading";
+import { Link } from "react-router-dom";
+import { baseUrl } from "../shared/baseUrl";
 import { FadeTransform } from "react-animation-components";
 
+function FeaturedItem({ item }) {
+  return (
+    <Card>
+      <Link to={`/shop/${item.id}`}>
+        <CardImg width="100%" src={baseUrl + item.image} alt={item.name} />
+        <CardImgOverlay>
+          <CardTitle>{item.name}</CardTitle>
+        </CardImgOverlay>
+      </Link>
+    </Card>
+  );
+}
+
 function Home(props) {
+  const featuredItems = props.items.items
+    .filter((items) => items.featured === true)
+    .map((item) => {
+      return (
+        <div className="col-md-3 mb-5 m-1">
+          <FeaturedItem item={item} />
+        </div>
+      );
+    });
+
+  if (props.items.isLoading) {
+    return (
+      <div className="container mt-5">
+        <div className="row row-content flex justify-content-center">
+          <div className="col">
+            <hr />
+            <hr />
+            <Loading />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (props.items.errMess) {
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <h3>{props.items.errMess}</h3>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <React.Fragment>
-      <div className="container mt-5">
-        <div className="row row-content align-items-center">
-          <div className="col-sm-7">
+      <div className="container-fluid mt-5">
+        <div className="row justify-content-center">
+          <div className="col-3 mt-5">
+            <h2>Featured Items</h2>
+            <hr />
+          </div>
+        </div>
+        <div className="row flex justify-content-center">{featuredItems}</div>
+      </div>
+
+      <div className="container-fluid">
+        <div
+          className="row row-content flex justify-content-center align-items-center p-5"
+          style={{
+            backgroundColor: "#fff",
+          }}
+        >
+          <div className="col-sm-6">
             <FadeTransform
               in
               transformProps={{
                 exitTransform: "translateX(-25%)",
               }}
             >
-              <h1>About us</h1>
-              <p>
+              <h1
+                style={{
+                  color: "#000",
+                  marginBottom: "30px",
+                  marginLeft: "200px",
+                }}
+              >
+                About us
+              </h1>
+              <p
+                style={{
+                  color: "#000",
+                  marginLeft: "200px",
+                  marginBottom: "40px",
+                }}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -27,18 +108,19 @@ function Home(props) {
               <Button
                 className="btn btn-lg btn-dark d-none d-sm-inline"
                 href="/aboutus"
+                style={{ marginLeft: "200px" }}
               >
                 About Us
               </Button>
             </FadeTransform>
           </div>
-          <div className="col text-center">
-            <div className="media ml-2 ml-m-5">
+          <div className="col text-center" style={{ marginRight: "-80px" }}>
+            <div className="media ml-m-4">
               <FadeTransform in>
                 <img
-                  className="d-flex img-thumbnail ml-3 ml-lg-5 border-0"
+                  className="flex img-thumbnail ml-5 ml-lg-5 border-0"
                   src="/assets/images/ReactiveWare.png"
-                  width="300"
+                  width="500"
                   alt="About Us"
                 />
               </FadeTransform>
@@ -51,9 +133,11 @@ function Home(props) {
             </Button>
           </div>
         </div>
+      </div>
 
-        <div className="row flex-row flex-row-reverse row-content align-items-center">
-          <div className="col-sm-7 col-sm-text-right">
+      <div className="container-fluid">
+        <div className="row flex flex-row-reverse row-content align-items-center p-5">
+          <div className="col-sm-6 col-sm-text-right">
             <FadeTransform
               in
               transformProps={{
@@ -61,7 +145,7 @@ function Home(props) {
               }}
             >
               <h1>Where it all comes from</h1>
-              <p>
+              <p style={{ marginRight: "250px", marginBottom: "40px" }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -83,7 +167,7 @@ function Home(props) {
             <div className="media">
               <FadeTransform in>
                 <img
-                  class="d-flex mr-3 img-thumbnail"
+                  class="flex mt-0 mb-0 img-thumbnail"
                   src="/assets/images/clothing-dark.jpg"
                   width="400"
                   alt="Where it comes from"

@@ -32,11 +32,9 @@ function About(props) {
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </h2>
               <footer className="blockquote-footer">
-                Patrick Nintzel,
+                Alec Williams,
                 <br />
-                <cite title="Source Title">
-                  Founder & CEO of Gears & Grains
-                </cite>
+                <cite title="Source Title">The guy who made ReactiveWare</cite>
               </footer>
             </FadeTransform>
           </div>
