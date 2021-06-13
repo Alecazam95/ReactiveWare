@@ -12,7 +12,7 @@ function Footer(props) {
             exitTransform: "translateY(75%)",
           }}
         >
-          <div className="row">
+          <div className="row flex justify-content-center">
             <div className="col-4 col-sm-2 offset-1">
               <h5>Links</h5>
               <ul className="list-unstyled">

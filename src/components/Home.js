@@ -1,5 +1,12 @@
 import React from "react";
-import { Button, Card, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
+import {
+  Button,
+  Card,
+  CardImg,
+  CardImgOverlay,
+  CardTitle,
+  CardText,
+} from "reactstrap";
 import { Loading } from "./Loading";
 import { Link } from "react-router-dom";
 import { baseUrl } from "../shared/baseUrl";
@@ -11,7 +18,8 @@ function FeaturedItem({ item }) {
       <Link to={`/shop/${item.id}`}>
         <CardImg width="100%" src={baseUrl + item.image} alt={item.name} />
         <CardImgOverlay>
-          <CardTitle>{item.name}</CardTitle>
+          <CardTitle tag="h5">{item.name}</CardTitle>
+          <CardText>{item.description}</CardText>
         </CardImgOverlay>
       </Link>
     </Card>
@@ -32,7 +40,10 @@ function Home(props) {
   if (props.items.isLoading) {
     return (
       <div className="container mt-5">
-        <div className="row row-content flex justify-content-center">
+        <div
+          className="row flex justify-content-center"
+          style={{ marginLeft: "550px" }}
+        >
           <div className="col">
             <hr />
             <hr />
@@ -58,9 +69,8 @@ function Home(props) {
   return (
     <React.Fragment>
       <div className="container-fluid mt-5">
-        <div className="row justify-content-center">
+        <div className="row flex align-self-center">
           <div className="col-3 mt-5">
-            <h2>Featured Items</h2>
             <hr />
           </div>
         </div>
