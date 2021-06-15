@@ -13,12 +13,27 @@ function Footer(props) {
           }}
         >
           <div className="row flex justify-content-center">
-            <div className="col-4 col-sm-2 offset-1">
+            <div className="col-4 col-sm-2 offset-2">
               <h5>Links</h5>
               <ul className="list-unstyled">
                 <li>
+                  <li>
+                    <Link to="/home" style={{ color: "#FFF" }}>
+                      Home
+                    </Link>
+                  </li>
                   <Link to="/aboutus" style={{ color: "#FFF" }}>
                     About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/shop" style={{ color: "#FFF" }}>
+                    Shop
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/howitsmade" style={{ color: "#FFF" }}>
+                    How It's Made
                   </Link>
                 </li>
               </ul>

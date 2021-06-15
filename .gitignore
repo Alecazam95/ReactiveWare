@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/components/Featured
+/src/components/Featured
 /.pnp
 .pnp.js
 

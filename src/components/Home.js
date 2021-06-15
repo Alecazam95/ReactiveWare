@@ -59,7 +59,11 @@ function Home(props) {
       <div className="container">
         <div className="row">
           <div className="col">
-            <h3>{props.items.errMess}</h3>
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+            <h3 style={{ textAlign: "center" }}>{props.items.errMess}</h3>
           </div>
         </div>
       </div>
